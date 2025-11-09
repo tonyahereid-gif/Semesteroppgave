@@ -5,7 +5,7 @@ import threading
 app = Flask(__name__)
 
 # Global variable to store the latest message (3 lines)
-latest_message = ["Ingen data mottatt ennå", "", ""]
+latest_message = ["Ingen data mottatt enda", "", ""]
 
 
 def read_serial():
@@ -63,3 +63,4 @@ def index():
 if __name__ == '__main__':
     threading.Thread(target=read_serial, daemon=True).start()
     app.run(host='0.0.0.0', port=5000)
+
